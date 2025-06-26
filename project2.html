@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Двухкомнатная квартира в современном стиле</title>
+    <link rel="stylesheet" href="style_portfolio.css">
+    <link rel="stylesheet" href="slider.css"> <!-- Подключаем слайдер CSS -->
+</head>
+<body>
+
+<header>
+    <div class="nav-container sticky-nav">
+        <nav class="header-nav">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Логотип">
+            </a>
+            <ul class="nav-middle">
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>  
+                <li><a href="index.html#about">Обо мне</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="project-container container">
+        <h2>Двухкомнатная квартира в современном стиле</h2>
+        <p style="color: #ccc; max-width: 800px; margin-bottom: 40px;">
+            - площадь 55 м2;<br>
+            - год реализации – в процессе.<br><br>
+            При выполнении основных задач заказчика в процессе проектирования данного интерьера особое значение имел индивидуальный подход к их решению. В частности, размещение рабочего стола для двоих в зоне кухни не только позволило разместить все необходимое в соответствии с нормами эргономики, но и обеспечило максимальное удобство заказчику, предпочитающему принимать пищу на рабочем месте. Проект находится в процессе реализации.
+        </p>
+
+        <div class="slider">
+            <div class="slider-wrapper">
+                <img src="ЖК Бусиновский,  спальня 2-2.jpeg" alt="Фото 1">
+		<img src="ЖК Бусиновский,  спальня 2-3.jpeg" alt="Фото 2">
+		<img src="ЖК Бусиновский,  прихожая 2.jpeg" alt="Фото 3">
+		<img src="ЖК Бусиновский,  прихожая 3.jpeg" alt="Фото 4">
+		<img src="ЖК Бусиновский,  санузел 1.jpeg" alt="Фото 5">
+		<img src="ЖК Бусиновский,  санузел 2.jpeg" alt="Фото 6">
+		<img src="ЖК Бусиновский,  санузел 3.jpeg" alt="Фото 7">
+		<img src="ЖК Бусиновский,  туалет 1.jpeg" alt="Фото 8">
+		<img src="ЖК Бусиновский,  туалет 2.jpeg" alt="Фото 9">
+		<img src="ЖК Бусиновский, гостиная 3-1.jpeg" alt="Фото 10">
+		<img src="ЖК Бусиновский, гостиная 3-2.jpeg" alt="Фото 11">
+		<img src="ЖК Бусиновский, гостиная 3-3.jpeg" alt="Фото 12">
+		<img src="ЖК Бусиновский, гостиная 3-4.jpeg" alt="Фото 13">
+
+            </div>
+            <button class="slider-btn prev">&#10094;</button>
+            <button class="slider-btn next">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<!-- Модальное окно -->
+<div class="modal" id="imageModal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Увеличенное изображение">
+    <button class="modal-nav-btn modal-prev">&#10094;</button>
+    <button class="modal-nav-btn modal-next">&#10095;</button>
+</div>
+
+
+
+<script src="slider.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

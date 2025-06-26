@@ -1,0 +1,244 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Общие стили */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    color: #ddd; /* Светло-серый для заголовков */
+}
+
+a {
+    color: #ddd; /* Светло-серые ссылки */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Ссылка становится белой при наведении */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff; /* Белый фон для кнопки */
+    color: #000; /* Черный текст на кнопке */
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ddd; /* Кнопка становится светло-серой при наведении */
+    color: #000;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Стили для хедера (новые) */
+/* Sticky Nav */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляем полупрозрачный фон для видимости */
+    padding: 0px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Header */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Важно */
+    align-items: center; /* Добавляем это */
+    height: 100%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 0;
+    justify-content: flex-start;
+    margin: 0 auto; /* Добавляем это */
+    max-width: 1200px; /*  Ограничиваем ширину, чтобы контент не растягивался */
+}
+
+.nav-middle {
+    list-style: none;
+    padding: 0;
+    margin: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.nav-middle li {
+    margin: 0 15px; /* Отступ между ссылками */
+}
+
+.header-nav li {
+    margin: 0 50px;
+}
+
+.nav-middle li a {
+    font-size: 1.3em; /* Увеличиваем размер шрифта */
+    padding: 10px 20px; /* Добавляем отступы внутри кнопок */
+    border-radius: 5px; /* Добавляем скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход для фона */
+}
+
+.nav-middle li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Меняем цвет фона при наведении */
+}
+
+.nav-left {
+    /* Убираем auto margin */
+}
+
+.nav-right {
+     /* Убираем auto margin */
+}
+
+.logo {
+    display: block;
+    margin: 0 10px;
+}
+
+.logo img {
+    height: 150px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Стили для секции "Обо мне" */
+/* Добавим стили для анимации появления */
+#about {
+    background-color: #111;
+    padding: 80px 0;
+    opacity: 0; /* Изначально секция невидима */
+    transform: translateY(120px); /* Смещаем секцию вниз */
+    transition: all 2.5s ease; /* Добавляем плавный переход */
+}
+
+#about.animated {
+    opacity: 1; /* Секция становится видимой */
+    transform: translateY(0); /* Возвращаем секцию на исходную позицию */
+}
+.about-container {
+    display: flex; /* Используем Flexbox для разделения на колонки */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.about-image {
+    flex: 1; /* Фотография занимает 1 часть доступного пространства */
+    padding-right: 30px; /* Добавляем отступ справа от фото */
+}
+
+.about-image img {
+    max-width: 100%; /* Фотография не выходит за пределы контейнера */
+    height: auto;
+    border-radius: 5px; /* Добавляем скругление углов */
+}
+
+.about-text {
+    flex: 2; /* Текст занимает 2 части доступного пространства */
+}
+
+#about .container {
+    max-width: 1140px; /* Ширина контейнера */
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Стили для секции "Контакты" */
+#contacts {
+    background-color: #222; /* Темно-серый фон */
+    padding: 0px 0;
+    text-align: center;
+}
+
+#contacts p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ddd; /* Светло-серый текст */
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Адаптивность (пример) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}

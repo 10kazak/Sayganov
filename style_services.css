@@ -1,0 +1,266 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Общие стили */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    color: #ddd; /* Светло-серый для заголовков */
+}
+
+a {
+    color: #ddd; /* Светло-серые ссылки */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Ссылка становится белой при наведении */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff; /* Белый фон для кнопки */
+    color: #000; /* Черный текст на кнопке */
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ddd; /* Кнопка становится светло-серой при наведении */
+    color: #000;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Стили для хедера (новые) */
+/* Sticky Nav */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляем полупрозрачный фон для видимости */
+    padding: 0px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Header */
+header {
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Добавим полупрозрачный фон для видимости */
+    padding: 50px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.header-content {
+   /* Удалите или закомментируйте все стили внутри этого блока */
+}
+
+.header-background {
+    /* Удалите этот блок стилей полностью, он больше не нужен */
+}
+
+.header-background img {
+   /* Удалите этот блок стилей полностью, он больше не нужен */
+}
+}
+
+.header-background {
+
+}
+
+.header-background img {
+
+}
+
+.header-content {
+
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 0;
+    justify-content: flex-start;
+    margin: 0 auto; /* Добавляем это */
+    max-width: 1200px; /*  Ограничиваем ширину, чтобы контент не растягивался */
+}
+
+.nav-middle {
+    list-style: none;
+    padding: 0;
+    margin: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.nav-middle li {
+    margin: 0 15px; /* Отступ между ссылками */
+}
+
+.header-nav li {
+    margin: 0 50px;
+}
+
+.nav-middle li a {
+    font-size: 1.3em; /* Увеличиваем размер шрифта */
+    padding: 10px 20px; /* Добавляем отступы внутри кнопок */
+    border-radius: 5px; /* Добавляем скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход для фона */
+}
+
+.nav-middle li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Меняем цвет фона при наведении */
+}
+
+.nav-left {
+    /* Убираем auto margin */
+}
+
+.nav-right {
+     /* Убираем auto margin */
+}
+
+.logo {
+    display: block;
+    margin: 0 10px;
+}
+
+.logo img {
+    height: 150px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Стили для страницы услуг */
+#services-page {
+    padding: 120px 0 40px 0px; /* Увеличиваем отступ сверху */
+    background-color: #222; /* Темно-серый фон для страницы, как в контактах */
+    color: #ddd; /* Светло-серый цвет текста */
+    font-family: Arial, sans-serif;
+}
+
+
+.service-detail {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Растягиваем по ширине */
+}
+
+.service-price {
+    width: 150px;
+    padding: 10px;
+    background-color: #c6ae8a; /* Цвет фона */
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    position: sticky; /* Делаем цену "липкой" */
+    top: 20px; /* Отступ от верха экрана, когда цена "прилипает" */
+    align-self: flex-start; /* Прижимаем цену к верхней части service-container */
+    margin-left: 20px;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-direction: column; /* услуги в столбик */
+    align-items: center; /* Центрируем service-container по горизонтали */
+    width: 100%; /* Чтобы занимать всю ширину родителя */
+}
+
+.service-container {
+    display: flex; /* Размещаем текст и цену рядом */
+    margin-bottom: 20px;
+    position: relative; /* Чтобы .service-price работал с position: sticky */
+    width: 90%; /* Занимаем 90% ширины services-wrapper */
+    max-width: 1500px; /* Ограничиваем максимальную ширину */
+    margin: 0px 0px 0px 180px; /* Центрируем container по горизонтали */
+}
+.service-detail h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #c6ae8a; /* Цвет заголовка #c6ae8a */
+    font-weight: bold;
+}
+
+.service-detail h4 {
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #c6ae8a; /* Цвет заголовка #c6ae8a */
+    font-weight: bold;
+}
+
+.service-detail p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #ddd; /* Светлый цвет текста */
+}
+
+.service-list {
+    list-style: decimal;
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.service-list li {
+    margin-bottom: 8px;
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #ddd; /* Светлый цвет текста для списка */
+}}/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Адаптивность (пример) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}

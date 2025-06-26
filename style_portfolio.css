@@ -1,0 +1,237 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Общие стили */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414; /* Черный фон */
+    color: #fff; /* Белый текст */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+main {
+    padding-top: 160px; /* Это отступ от фиксированного header-а */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    color: #ddd; /* Светло-серый для заголовков */
+}
+
+a {
+    color: #ddd; /* Светло-серые ссылки */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Ссылка становится белой при наведении */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff; /* Белый фон для кнопки */
+    color: #000; /* Черный текст на кнопке */
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ddd; /* Кнопка становится светло-серой при наведении */
+    color: #000;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Стили для хедера (новые) */
+/* Sticky Nav */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Добавляем полупрозрачный фон для видимости */
+    padding: 0px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Header */
+header {
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Добавим полупрозрачный фон для видимости */
+    padding: 50px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.header-content {
+   /* Удалите или закомментируйте все стили внутри этого блока */
+}
+
+.header-background {
+    /* Удалите этот блок стилей полностью, он больше не нужен */
+}
+
+.header-background img {
+   /* Удалите этот блок стилей полностью, он больше не нужен */
+}
+}
+
+.header-background {
+
+}
+
+.header-background img {
+
+}
+
+.header-content {
+
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 0;
+    justify-content: flex-start;
+    margin: 0 auto; /* Добавляем это */
+    max-width: 1200px; /*  Ограничиваем ширину, чтобы контент не растягивался */
+}
+
+.nav-middle {
+    list-style: none;
+    padding: 0;
+    margin: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.nav-middle li {
+    margin: 0 15px; /* Отступ между ссылками */
+}
+
+.header-nav li {
+    margin: 0 50px;
+}
+
+.nav-middle li a {
+    font-size: 1.3em; /* Увеличиваем размер шрифта */
+    padding: 10px 20px; /* Добавляем отступы внутри кнопок */
+    border-radius: 5px; /* Добавляем скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход для фона */
+}
+
+.nav-middle li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Меняем цвет фона при наведении */
+}
+
+.nav-left {
+    /* Убираем auto margin */
+}
+
+.nav-right {
+     /* Убираем auto margin */
+}
+
+.logo {
+    display: block;
+    margin: 0 10px;
+}
+
+.logo img {
+    height: 150px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Портфолио */
+#portfolio-page {
+    padding: 0px 0;
+}
+
+#portfolio-page h2 {
+    color: #c6ae8a; /* Золотистый цвет для заголовка */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+    gap: 20px; /* Расстояние между элементами сетки */
+    padding: 0 20px;  /* Отступы по бокам */
+}
+
+.portfolio-item {
+    display: block; /* Чтобы ссылка занимала всю область */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: inherit; /* Наследуем цвет текста */
+    border-radius: 8px;
+    overflow: hidden; /* Обрезаем изображение по краям */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    transition: transform 0.2s ease; /* Плавный переход при наведении */
+    height: 400px; /* Задаем высоту для ячеек */
+    position: relative; /*  Контейнер теперь относительный */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Приподнимаем элемент при наведении */
+}
+
+.portfolio-item img {
+    width: 100%; /* Занимает всю ширину блока */
+    height: 100%; /*  Занимает всю высоту блока */
+    object-fit: cover; /*  Масштабируем изображение, заполняя блок, обрезая при необходимости  */
+    display: block; /* Убираем небольшое пространство под изображением */
+}
+
+.portfolio-item-title {
+    padding: 15px 0px 15px 0px;
+    background-color: rgba(0, 0, 0, 0.5); /* Золотистый цвет фона */
+    color: #c6ae8a;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+    position: absolute; /*  Абсолютно позиционируем заголовок  */
+    bottom: 0; /*  Прижимаем к низу ячейки  */
+    left: 0;
+    width: 100%;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Адаптивность (пример) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}

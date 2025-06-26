@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санузел с джакузи в стиле неоклассика</title>
+    <link rel="stylesheet" href="style_portfolio.css">
+    <link rel="stylesheet" href="slider.css"> <!-- Подключаем слайдер CSS -->
+</head>
+<body>
+
+<header>
+    <div class="nav-container sticky-nav">
+        <nav class="header-nav">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Логотип">
+            </a>
+            <ul class="nav-middle">
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>  
+                <li><a href="index.html#about">Обо мне</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="project-container container">
+        <h2>Санузел с джакузи в стиле неоклассика</h2>
+        <p style="color: #ccc; max-width: 800px; margin-bottom: 40px;">
+            - площадь 9 м2;<br>
+            - год реализации 2024.<br><br>
+            Отличительной особенностью данного санузла является наличие окна, а также значительная площадь, которая позволила реализовать одно из основных пожеланий заказчика – джакузи с гидромассажем. Использование белого мрамора при дневном естественном свете визуально увеличивает и без того большое помещение. В качестве альтернативы классическому полотенцесушителю была спроектирована теплая стена.
+        </p>
+
+        <div class="slider">
+            <div class="slider-wrapper">
+                <img src="! Санузел с джакузи 1.jpeg" alt="Фото 1">
+		<img src="Санузел с джакузи 2.jpeg" alt="Фото 2">
+		<img src="Санузел с джакузи 3.jpeg" alt="Фото 3">
+		<img src="Санузел с джакузи 4.jpeg" alt="Фото 4">
+            </div>
+            <button class="slider-btn prev">&#10094;</button>
+            <button class="slider-btn next">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<!-- Модальное окно -->
+<div class="modal" id="imageModal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Увеличенное изображение">
+    <button class="modal-nav-btn modal-prev">&#10094;</button>
+    <button class="modal-nav-btn modal-next">&#10095;</button>
+</div>
+
+
+
+<script src="slider.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

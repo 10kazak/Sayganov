@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современная кухня</title>
+    <link rel="stylesheet" href="style_portfolio.css">
+    <link rel="stylesheet" href="slider.css"> <!-- Подключаем слайдер CSS -->
+</head>
+<body>
+
+<header>
+    <div class="nav-container sticky-nav">
+        <nav class="header-nav">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Логотип">
+            </a>
+            <ul class="nav-middle">
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>  
+                <li><a href="index.html#about">Обо мне</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="project-container container">
+        <h2>Современная кухня</h2>
+        <p style="color: #ccc; max-width: 800px; margin-bottom: 40px;">
+            - площадь 9 м2;<br>
+            - год реализации 2024.<br><br>
+            Главной задачей при проектировании данной кухни являлось функциональное размещение кухонного гарнитура, включающего в себя всю необходимую бытовую технику, а также обеденной зоны. Выбранная заказчиком природная цветовая палитра визуально расширяет небольшое пространство.
+        </p>
+
+        <div class="slider">
+            <div class="slider-wrapper">
+                <img src="! Современная кухня 1.jpeg" alt="Фото 1">
+		<img src="Современная кухня 2.jpeg" alt="Фото 2">
+		<img src="Современная кухня 3.jpeg" alt="Фото 3">
+            </div>
+            <button class="slider-btn prev">&#10094;</button>
+            <button class="slider-btn next">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<!-- Модальное окно -->
+<div class="modal" id="imageModal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Увеличенное изображение">
+    <button class="modal-nav-btn modal-prev">&#10094;</button>
+    <button class="modal-nav-btn modal-next">&#10095;</button>
+</div>
+
+
+
+<script src="slider.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
